@@ -1,0 +1,49 @@
+9/06/21:
+1.Basic Information about java
+2.Convention rules
+3.About compiler
+4.About static and non-static members
+Assignment:
+1.Garbage Collector
+2.Auto boxing/unboxing
+3.Mutability/unmutability
+4.composition/aggregation/association
+5.static
+6.inheritance
+7.finalize
+8.ovverriding/overloading
+9.final
+10.abstract
+11.interface
+---------------------------------------
+10/06/21
+1.Mcq's on recursion,Inheritance,upcasting
+Assigment:
+1.Exceptional handling
+2.Collections
+3.Assertions
+4.Lamda
+5.Streams
+-------------------------------------
+11/06/21
+1.Inner class
+2.Nested methods
+3.Interface mcq
+4.Collections-->Treeset
+Assignment:
+1.Handson Treeset
+2.ComparableInterface
+--------------------------------------
+14/06/21
+1.About class and interface mcq's
+2.Why we need Interface and Abstract
+3.Handson-->inheritence 2 programs
+4.Questions on Java
+-------------------------------------
+15/06/21
+1.JBDC
+2.JDBC drivers 4 types
+3.Statement,PreparedStatement
+4.Programs on JDBC
+5.mssql queries
+
