@@ -1,0 +1,54 @@
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+       
+          
+ <struts-config>
+ <form-beans>    
+    <form-bean name="userDataForm" type="com.forms.UserDataForm"></form-bean>
+    <form-bean name="userRegisterForm" type="com.forms.UserRegisterForm"></form-bean>
+        <form-bean name="ticketForm" type="com.forms.TicketForm"></form-bean>
+        <form-bean name="historyForm" type="com.forms.TicketHistoryForm"></form-bean>
+ </form-beans>
+ 
+ <action-mappings>
+
+ <action input="/UserData.jsp" name="userDataForm" path="/user" type="com.actions.UserDataAction">
+        <forward name="admin" path="/AdminHomePage.jsp"></forward>
+        <forward name="user" path="/UserHomePage.jsp"></forward>
+        <forward name="error" path="/Error.jsp"></forward>
+    </action>
+    
+    <action name="userRegisterForm" path="/register" type="com.actions.UserRegisterAction">
+        <forward name="success" path="/UserRegister.jsp"></forward>
+        <forward name="error" path="/Error.jsp"></forward>
+    </action>
+    
+    <action  input="/RaiseATicket.jsp" name="ticketForm" path="/ticket" type="com.actions.TicketAction">
+        <forward name="Tickets" path="/success.jsp"></forward>
+        <forward name="error" path="/Error.jsp"></forward>
+    </action>
+     <action  name="userDataForm" path="/profile" type="com.actions.ProfileLinkAction">
+        <forward name="success" path="/ProfileDetails.jsp"></forward>     
+    </action>
+     <action  name="userDataForm" path="/details" type="com.actions.TicketHistoryAction">
+        <forward name="success" path="/Details.jsp"></forward>     
+    </action>
+     <action  name="userDataForm" path="/status" type="com.actions.StatusAction">
+        <forward name="status" path="/StatusLink.jsp"></forward>     
+    </action>
+     <action  name="userDataForm" path="/logout" type="com.actions.LogoutAction">
+        <forward name="logout" path="/Logout.jsp"></forward>     
+    </action>
+    <action  name="userDataForm" path="/admin" type="com.actions.AdminTicketAction">
+        <forward name="admin" path="/AdminOpenTickets.jsp"></forward>     
+    </action>
+     <action   input="/AdminTicketHistory.jsp" name="historyForm" path="/tickethistory" type="com.actions.AdminAction">
+        <forward name="history" path="/check.jsp"></forward>     
+    </action>
+     <action   name="historyForm" path="/history" type="com.actions.HistoryAction">
+        <forward name="adminhistory" path="/Admin.jsp"></forward>     
+    </action>
+ </action-mappings>
+ 
+ </struts-config>         

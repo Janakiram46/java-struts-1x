@@ -1,0 +1,30 @@
+package com.actions;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+
+import com.entity.TicketEntity;
+import com.forms.UserDataForm;
+import com.repos.TicketDAO;
+
+public class StatusAction extends Action
+{
+
+	@Override
+	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		// TODO Auto-generated method stub
+		UserDataForm udf=(UserDataForm) form;
+		List<TicketEntity> report=TicketDAO.getOpenList(udf.getUsername());
+		request.getSession().setAttribute("status",report);
+		return mapping.findForward("status");
+	}
+
+}
